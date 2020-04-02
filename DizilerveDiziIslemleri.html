@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .title {
+            position: center;
+            color: #357ebd;
+            font-family:"Comic Sans MS";
+        }
+
+
+
+
+        body {
+            background-color: #494f54;
+        }
+        .baslik {
+            font-family: "Comic Sans MS";
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            font-family: "Comic Sans MS";
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #494f54;}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown {
+            font-family: "Eras Bold ITC";
+        }
+
+
+        ul {
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 0;
+            padding: 0;
+            border-radius: 25px;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn1 {
+            display: inline-block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown1:hover .dropbtn1 {
+            background-color: red;
+        }
+
+        li.dropdown1 {
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content1 a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content1 a:hover {background-color: #494f54;}
+
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+
+        .baslik {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 175px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 240px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik1 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 420px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+
+        }
+        .metin1 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 460px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik2 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 740px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin2 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 780px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik3 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 1260px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin3 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1300px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik4 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 1590px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin4 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1630px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik5 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 1980px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin5 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2020px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik6 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 2260px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+
+        }
+        .metin6 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2300px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+
+        }
+        .baslik7 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 2480px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin7 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2520px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik8 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 2950px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin8 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2990px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+
+        }
+        .baslik9 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 3200px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin9 {
+            color: #f8d7da;
+            position: absolute;
+            left: 100px;
+            top: 3240px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik10 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 3380px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin10 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 3420px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik11 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 3680px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin11 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 3720px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+
+        .baslik12 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 3920px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin12 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 3960px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik13 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 4150px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin13 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 4190px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik14 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 4600px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin14 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 4640px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik15 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 5280px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin15 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 5320px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik16 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 5850px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin16 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 5890px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik17 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 6050px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin17 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 6090px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik18 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 6210px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin18 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 6250px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik19 {
+            font-family: "Comic Sans MS";
+            color: #5bc0de;
+            position:absolute;
+            left: 100px;
+            top: 7000px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin19 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 7040px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<center>
+
+<h1 class="title">
+
+    <font color="yellow" size="8" > JavaScript</font>
+
+</h1>
+</center>
+<ul>
+    <li class="baslika"><a href="JavaScriptGiris.html">JavaScript Giris</a></li>
+    <li><a href="JavaScriptYazılımYapısı.html">JavaScript Yazılım Yapısı</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">JavaScript</a>
+        <div class="dropdown-content">
+            <a href="Degiskenler.html">Degiskenler</a>
+            <a href="Operatorler.html">Operatorler</a>
+            <a href="Aritmetik.html">Aritmetik</a>
+            <a href="VeriTipleri.html">Veri Tipleri</a>
+            <a href="FonksiyonYapisi.html">Fonksiyon Yapısı</a>
+        </div>
+    </li>
+    <li class="dropdown1">
+        <a href="javascript:void(0)" class="dropbtn1">JavaScript Tutorial</a>
+        <div class="dropdown-content1">
+            <a href="Olaylar.html">Olaylar</a>
+            <a href="Stringler,Sayilar.html">Stringler,Sayilar</a>
+            <a href="DizilerveDiziIslemleri.html">Diziler ve Dizi Islemleri</a>
+            <a href="İfKosulYapilari.html">If Kosul Yapıları</a>
+            <a href="TipDonusumleri.html">Tip Donusumleri</a>
+        </div>
+
+    <li><a href="CalismaYapisiveGenelMimarisi.html">Calısma Yapısı ve Genel Mimarisi</a></li>
+</ul>
+<h1 class="baslik">
+    JavaScript Dizileri
+</h1>
+
+<h3 class="metin">
+    JavaScript dizileri, birden çok değeri tek bir değişkende depolamak için kullanılır.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array'">Ornek icin TIKLA</button><br>
+</h3>
+
+<h2 class="baslik1">
+    Dizi nedir?
+</h2>
+
+<h2 class="baslik2">
+    Dizi Oluşturma
+</h2>
+
+<h2 class="baslik3">
+    JavaScript Anahtar Kelimesini Kullanma yeni
+</h2>
+
+<h2 class="baslik4">
+    Dizinin Elemanlarına Erişme
+</h2>
+
+<h2 class="baslik5">
+    Dizi Öğesini Değiştirme
+</h2>
+
+<h2 class="baslik6">
+    Tam Diziye Erişme
+</h2>
+
+<h2 class="baslik7">
+    Diziler Nesnedir
+</h2>
+
+<h2 class="baslik8">
+    Dizi Öğeleri Nesne Olabilir
+</h2>
+
+<h2 class="baslik9">
+    Dizi Özellikleri ve Yöntemleri
+</h2>
+
+<h2 class="baslik10">
+    Length Özellik
+</h2>
+
+<h2 class="baslik11">
+    İlk Dizi Öğesine Erişim
+</h2>
+
+<h2 class="baslik12">
+    Son Dizi Öğesine Erişme
+</h2>
+
+<h2 class="baslik13">
+    Döngü Dizisi Elemanları
+</h2>
+
+<h2 class="baslik14">
+    Dizi Öğeleri Ekleme
+</h2>
+
+<h2 class="baslik15">
+    İlişkilendirilebilir Diziler
+</h2>
+
+<h2 class="baslik16">
+    Diziler ve Nesneler Arasındaki Fark
+</h2>
+
+<h2 class="baslik17">
+    Diziler Ne Zaman Kullanılmalı. Nesneler ne zaman kullanılır?
+</h2>
+
+<h2 class="baslik18">
+    Yeni Diziden Kaçının ()
+</h2>
+
+<h2 class="baslik19">
+    Bir Diziyi Tanıma
+</h2>
+
+<h3 class="metin1">
+    Dizi, aynı anda birden fazla değeri tutabilen özel bir değişkendir.<br>
+
+    Bir öğe listeniz varsa (örneğin, araba isimleri listesi), arabaları tek değişkenlerde saklamak şöyle görünebilir:<br>
+    <br>var car1 = "Saab";<br>
+    var car2 = "Volvo";<br>
+    var car3 = "BMW";<br><br>
+    Ancak, ya arabalar arasında dolaşıp belirli bir tane bulmak istiyorsanız? Peki ya 3 değil, 300 arabanız olsaydı?<br>
+
+    Çözüm bir dizi!<br>
+
+    Bir dizi, tek bir ad altında birçok değeri tutabilir ve değerlere bir dizin numarasına başvurarak erişebilirsiniz.<br>
+</h3>
+
+<h3 class="metin2">
+    Bir dizi değişmezi kullanmak, bir JavaScript Dizisi oluşturmanın en kolay yoludur.<br><br>
+
+    Sözdizimi:<br>
+    <br>""var array_name = [item1, item2, ...];<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array'">Ornek icin TIKLA</button><br>
+    <br>Boşluklar ve satır kesmeleri önemli değildir. Bir bildirim birden çok satıra yayılabilir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_newlines'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin3">
+    Aşağıdaki örnek aynı zamanda bir Array oluşturur ve buna Array değerleri verir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_new'">Ornek icin TIKLA</button><br>
+    <br>**Yukarıdaki iki örnek tamamen aynıdır. Kullanmaya gerek yoktur new Array().<br>
+    <br>**Basitlik, okunabilirlik ve yürütme hızı için ilkini kullanın (dizi değişmez yöntemi).<br>
+
+
+</h3>
+
+<h3 class="metin4">
+    Bir dizi öğesine dizin numarasına bakarak erişirsiniz .<br>
+
+    Bu ifade, şu öğedeki ilk öğenin değerine erişir cars:<br><br>
+    **var name = cars[0];<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_element'">Ornek icin TIKLA</button><br>
+    <br>**Not: Dizi dizinleri 0 ile başlar.<br>
+
+    [0] ilk elementtir. [1] ikinci elementtir.<br>
+</h3>
+
+<h3 class="metin5">
+    Bu ifade, ilk öğenin değerini şu şekilde değiştirir cars:<br>
+    <br>**cars[0] = "Opel";<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_element_change'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin6">
+    JavaScript ile, dizi adına başvurarak tam diziye erişilebilir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_full'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin7">
+    Diziler özel bir nesne türüdür. typeofJavaScript operatör diziler için "nesne" döndürür.<br>
+
+    Ancak, JavaScript dizileri en iyi dizi olarak tanımlanır.<br>
+
+    Diziler , "öğelerine" erişmek için sayıları kullanır . Bu örnekte person[0] John'u döndürür:<br>
+    <br>Dizi
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_array'">Ornek icin TIKLA</button><br>
+    <br>Nesne
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_object'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin8">
+    JavaScript değişkenleri nesne olabilir. Diziler özel nesnelerdir.<br>
+
+    Bu nedenle, aynı Dizide farklı türde değişkenlere sahip olabilirsiniz.<br>
+
+    Bir Dizide nesneler olabilir. Bir Dizide işlevleriniz olabilir. Bir Dizide diziler olabilir:<br><br>
+    * myArray[0] = Date.now;<br>
+    * myArray[1] = myFunction;<br>
+    * myArray[2] = myCars;<br>
+
+
+</h3>
+
+<h3 class="metin9">
+    JavaScript dizilerinin gerçek gücü yerleşik dizi özellikleri ve yöntemleridir:<br><br>
+    var x = cars.length;   // The length property returns the number of elements<br>
+    var y = cars.sort();   // The sort() method sorts arrays<br>
+
+</h3>
+
+<h3 class="metin10">
+    lengthBir dizinin özelliği, bir dizi (dizi elemanlarının sayısı) uzunluğu ile döner.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_length'">Ornek icin TIKLA</button><br>
+
+    <br><br>**lengthÖzelliği her zaman en yüksek dizi indeksi birden fazlasıdır.<br>
+
+</h3>
+
+<h3 class="metin11">
+    <br>**   <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_first'">Ornek icin TIKLA</button><br>
+</h3>
+
+<h3 class="metin12">
+    <br>**   <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_last'">Ornek icin TIKLA</button><br>
+</h3>
+
+<h3 class="metin13">
+    Bir dizi boyunca döngü oluşturmanın en güvenli yolu bir fordöngü kullanmaktır :<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_loop'">Ornek icin TIKLA</button><br>
+
+    <br>Ayrıca bu Array.forEach()işlevi kullanabilirsiniz :<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_loop_foreach'">Ornek icin TIKLA</button><br>
+</h3>
+
+<h3 class="metin14">
+    Bir diziye yeni bir öğe eklemenin en kolay yolu push()yöntemi kullanmaktır :<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_add_push'">Ornek icin TIKLA</button><br>
+    <br>lengthÖzellik kullanılarak bir diziye yeni öğe de eklenebilir :<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_add'">Ornek icin TIKLA</button><br>
+    <br>UYARI!<br>
+    Yüksek dizine sahip öğeler eklemek, bir dizide tanımlanmamış "delikler" oluşturabilir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_holes'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin15">
+    Birçok programlama dili, adlandırılmış dizinlere sahip dizileri destekler.<br>
+
+    Adlandırılmış dizinleri olan dizilere ilişkilendirilebilir diziler (veya karma) denir.<br>
+
+    JavaScript yok değil adlandırılmış endekslerine dizileri destekler.<br>
+
+    JavaScript'te, diziler her zaman numaralı dizinler kullanır .<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_associative_1'">Ornek icin TIKLA</button><br>
+    <br>UYARI !!<br>
+    Adlandırılmış dizinler kullanırsanız, JavaScript diziyi standart bir nesneye yeniden tanımlar.<br>
+    Bundan sonra, bazı dizi yöntemleri ve özellikleri yanlış sonuçlar üretecektir .<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_associative_2'">Ornek icin TIKLA</button><br>
+</h3>
+
+<h3 class="metin16">
+    JavaScript'te, diziler numaralı dizinler kullanır .<br>
+
+    JavaScript'te nesneler adlandırılmış dizinler kullanır .<br>
+    <br>**Diziler, numaralandırılmış dizinleri olan özel bir nesne türüdür.<br>
+
+</h3>
+
+<h3 class="metin17">
+   # JavaScript ilişkilendirilebilir dizileri desteklemez.<br>
+   # Öğe adlarının dize (metin) olmasını istediğinizde nesneleri kullanmalısınız .<br>
+   # Öğe adlarının sayı olmasını istediğinizde diziler kullanmalısınız .<br>
+
+</h3>
+
+<h3 class="metin18">
+    JavaScript'in yerleşik dizi yapıcısı newArray () ' ı kullanmaya gerek yoktur .<br>
+
+    []Bunun yerine kullanın .<br>
+
+    Bu iki farklı ifadenin her ikisi de points adlı yeni bir boş dizi oluşturur:<br><br>
+    var points = new Array();     // Bad<br>
+    var points = [];              // Good<br><br>
+    Bu iki farklı ifadenin her ikisi de 6 sayı içeren yeni bir dizi oluşturur:<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_literal'">Ornek icin TIKLA</button><br><br>
+
+    newAnahtar kelime sadece kod zorlaştırmaktadır. Ayrıca bazı beklenmedik sonuçlar da üretebilir:<br>
+    <br>**var points = new Array(40, 100);  // Creates an array with two elements (40 and 100)<br><br>
+    Öğelerden birini kaldırırsam ne olur?<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_new_error'">Ornek icin TIKLA</button><br><br>
+
+</h3>
+
+<h3 class="metin19">
+    Yaygın bir soru şudur: Bir değişkenin dizi olup olmadığını nasıl anlarım?<br>
+
+    Sorun, JavaScript operatörünün typeof" object" döndürmesi :<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_typeof'">Ornek icin TIKLA</button><br><br>
+
+    JavaScript dizisi bir nesne olduğu için typeof operatörü nesneyi döndürür.<br>
+
+    <br>Çözüm 1:<br><br>
+    Bu sorunu çözmek için ECMAScript 5 yeni bir yöntem tanımlar Array.isArray():<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_isarray_method'">Ornek icin TIKLA</button><br><br>
+
+    <br>Çözüm 2:<br><br>
+    Bu sorunu çözmek için kendi isArray()işlevinizi oluşturabilirsiniz :<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_isarray'">Ornek icin TIKLA</button><br><br>
+
+    <br>Bağımsız değişken bir dizi ise yukarıdaki işlev her zaman true değerini döndürür.<br>
+
+    Daha doğrusu: nesne prototipi "Dizi" kelimesini içeriyorsa true değerini döndürür.<br><br>
+    Çözüm 3:<br><br>
+    instanceofBir nesne, belirli bir yapıcısı tarafından oluşturulursa operatörü true döndürür:<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_instanceof'">Ornek icin TIKLA</button><br><br>
+
+
+
+</h3>
+
+
+
+
+
+
+</body>
+</html>
+

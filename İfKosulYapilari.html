@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .title {
+            position: center;
+            color: #000000;
+            font-family:"Comic Sans MS";
+        }
+
+
+
+
+        body {
+            background-color: #494f54;
+        }
+        .baslik {
+            font-family: "Comic Sans MS";
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            font-family: "Comic Sans MS";
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #494f54;}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown {
+            font-family: "Eras Bold ITC";
+        }
+
+
+        ul {
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 0;
+            padding: 0;
+            border-radius: 25px;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn1 {
+            display: inline-block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown1:hover .dropbtn1 {
+            background-color: red;
+        }
+
+        li.dropdown1 {
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content1 a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content1 a:hover {background-color: #494f54;}
+
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+        .baslik {
+            font-family: "Comic Sans MS";
+            color: deeppink;
+            position:absolute;
+            left: 100px;
+            top: 175px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 240px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik1 {
+            font-family: "Comic Sans MS";
+            color: deeppink;
+            position:absolute;
+            left: 100px;
+            top: 320px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin1 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 360px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik2 {
+            font-family: "Comic Sans MS";
+            color: deeppink;
+            position:absolute;
+            left: 100px;
+            top: 570px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin2 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 610px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .baslik3 {
+            font-family: "Comic Sans MS";
+            color: deeppink;
+            position:absolute;
+            left: 100px;
+            top: 1070px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin3 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1110px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik4 {
+            font-family: "Comic Sans MS";
+            color: deeppink;
+            position:absolute;
+            left: 100px;
+            top: 1450px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin4 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1490px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<center>
+
+<h1 class="title">
+
+    <font color="#008b8b" size="8" > JavaScript</font>
+
+</h1>
+</center>
+<ul>
+    <li class="baslika"><a href="JavaScriptGiris.html">JavaScript Giris</a></li>
+    <li><a href="JavaScriptYazılımYapısı.html">JavaScript Yazılım Yapısı</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">JavaScript</a>
+        <div class="dropdown-content">
+            <a href="Degiskenler.html">Degiskenler</a>
+            <a href="Operatorler.html">Operatorler</a>
+            <a href="Aritmetik.html">Aritmetik</a>
+            <a href="VeriTipleri.html">Veri Tipleri</a>
+            <a href="FonksiyonYapisi.html">Fonksiyon Yapısı</a>
+        </div>
+    </li>
+    <li class="dropdown1">
+        <a href="javascript:void(0)" class="dropbtn1">JavaScript Tutorial</a>
+        <div class="dropdown-content1">
+            <a href="Olaylar.html">Olaylar</a>
+            <a href="Stringler,Sayilar.html">Stringler,Sayilar</a>
+            <a href="DizilerveDiziIslemleri.html">Diziler ve Dizi Islemleri</a>
+            <a href="İfKosulYapilari.html">If Kosul Yapıları</a>
+            <a href="TipDonusumleri.html">Tip Donusumleri</a>
+        </div>
+
+    <li><a href="CalismaYapisiveGenelMimarisi.html">Calısma Yapısı ve Genel Mimarisi</a></li>
+</ul>
+
+<h1 class="baslik">
+    JavaScript if ve else if
+</h1>
+<h3 class="metin">
+   <br> Koşullu ifadeler, farklı koşullara bağlı olarak farklı eylemler gerçekleştirmek için kullanılır.<br>
+</h3>
+
+<h2 class="baslik1">
+    Koşullu İfadeler
+</h2>
+
+<h2 class="baslik2">
+    İf Bildirimi
+</h2>
+
+<h2 class="baslik3">
+    Başka Açıklama
+</h2>
+
+<h2 class="baslik4">
+    If If if Deyimi
+</h2>
+
+<h3 class="metin1">
+    Çoğu zaman kod yazarken, farklı kararlar için farklı eylemler gerçekleştirmek istersiniz.<br>
+
+    Bunu yapmak için kodunuzda koşullu ifadeler kullanabilirsiniz.<br>
+
+    JavaScript'te şu koşullu ifadelere sahibiz:<br>
+
+    # ifBelirli bir koşul doğruysa yürütülecek bir kod bloğu belirtmek için kullanın<br>
+    # elseAynı koşul yanlışsa yürütülecek bir kod bloğu belirtmek için kullanın<br>
+    # else ifİlk koşul yanlışsa test edilecek yeni bir koşul belirtmek için kullanın<br>
+    # switchYürütülecek birçok alternatif kod bloğu belirtmek için kullanın<br>
+</h3>
+
+<h3 class="metin2">
+    ifBir koşul doğruysa yürütülecek bir JavaScript kodu bloğu belirtmek için deyimi kullanın .<br><br>
+    if (condition) {<br>
+    //  block of code to be executed if the condition is true<br>
+    }<br><br>
+
+    <br>**Bunun ifküçük harflerle yazıldığını unutmayın . Büyük harfler (If veya IF) bir JavaScript hatası oluşturur.<br><br>
+    <br>Misal<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_ifthen'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+
+<h3 class="metin3">
+    elseKoşul yanlışsa yürütülecek bir kod bloğu belirtmek için deyimi kullanın .<br><br>
+    if (condition) {<br>
+    //  block of code to be executed if the condition is true<br>
+    } else {<br>
+    //  block of code to be executed if the condition is false<br>
+    }<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_ifthenelse'">Ornek icin TIKLA</button><br>
+</h3>
+
+
+<h3 class="metin4">
+    else ifİlk koşul yanlışsa yeni bir koşul belirtmek için deyimi kullanın .<br>
+    <br>Sözdizimi<br>
+    if (condition1) {<br>
+    //  block of code to be executed if condition1 is true<br>
+    } else if (condition2) {<br>
+    //  block of code to be executed if the condition1 is false and condition2 is true<br>
+    } else {<br>
+    //  block of code to be executed if the condition1 is false and condition2 is false<br>
+    }<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_elseif'">Ornek icin TIKLA</button><br>
+</h3>
+
+
+
+
+</body>
+</html>
+

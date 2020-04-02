@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .title {
+            position: center;
+            color: #3c763d;
+            font-family:"Comic Sans MS";
+        }
+
+
+
+
+        body {
+            background-color: #494f54;
+        }
+        .baslik {
+            font-family: "Comic Sans MS";
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            font-family: "Comic Sans MS";
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #494f54;}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown {
+            font-family: "Eras Bold ITC";
+        }
+
+
+        ul {
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 0;
+            padding: 0;
+            border-radius: 25px;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn1 {
+            display: inline-block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown1:hover .dropbtn1 {
+            background-color: red;
+        }
+
+        li.dropdown1 {
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content1 a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content1 a:hover {background-color: #494f54;}
+
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+        .baslik {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 175px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 240px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik1 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 320px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin1 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 360px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik2 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 950px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin2 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 990px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .baslik3 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 1160px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+
+        }
+        .metin3 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 1200px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .table1 {
+            top: 1390px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        .metin33 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 1550px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .table11 {
+            top: 2150px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        .baslik4 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 2420px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+
+        }
+        .metin4 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 2460px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik5 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 3300px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin5 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 3340px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .sbaslik {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 4650px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 4700px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .sbaslik1 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 5120px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin1 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 5160px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .sbaslik2 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 5260px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin2 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 5300px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .sbaslik3 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 5960px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin3 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 6000px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .sbaslik4 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 7500px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin4 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 7540px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .sbaslik5 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 8600px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin5 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 8640px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .sbaslik6 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 10000px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin6 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 10040px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333
+        }
+        .sbaslik7 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 10650px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin7 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 10690px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333
+        }
+        .sbaslik8 {
+            font-family: "Comic Sans MS";
+            color: #6610f2;
+            position:absolute;
+            left: 100px;
+            top: 11130px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .smetin8 {
+            font-family: "Comic Sans MS";
+            color: #f5f5f5;
+            position:absolute;
+            left: 100px;
+            top: 11190px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333
+        }
+
+    </style>
+</head>
+<body>
+<center>
+
+<h1 class="title">
+
+    <font color="#d2691e" size="8" > JavaScript</font>
+
+</h1>
+</center>
+<ul>
+    <li class="baslika"><a href="JavaScriptGiris.html">JavaScript Giris</a></li>
+    <li><a href="JavaScriptYazılımYapısı.html">JavaScript Yazılım Yapısı</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">JavaScript</a>
+        <div class="dropdown-content">
+            <a href="Degiskenler.html">Degiskenler</a>
+            <a href="Operatorler.html">Operatorler</a>
+            <a href="Aritmetik.html">Aritmetik</a>
+            <a href="VeriTipleri.html">Veri Tipleri</a>
+            <a href="FonksiyonYapisi.html">Fonksiyon Yapısı</a>
+        </div>
+    </li>
+    <li class="dropdown1">
+        <a href="javascript:void(0)" class="dropbtn1">JavaScript Tutorial</a>
+        <div class="dropdown-content1">
+            <a href="Olaylar.html">Olaylar</a>
+            <a href="Stringler,Sayilar.html">Stringler,Sayilar</a>
+            <a href="DizilerveDiziIslemleri.html">Diziler ve Dizi Islemleri</a>
+            <a href="İfKosulYapilari.html">If Kosul Yapıları</a>
+            <a href="TipDonusumleri.html">Tip Donusumleri</a>
+        </div>
+
+    <li><a href="CalismaYapisiveGenelMimarisi.html">Calısma Yapısı ve Genel Mimarisi</a></li>
+</ul>
+
+<h1 class="baslik">
+    JavaScript Dizeleri
+</h1>
+
+<h3 class="metin">
+    JavaScript dizeleri metin depolamak ve değiştirmek için kullanılır.<br><br>
+</h3>
+
+<h2 class="baslik1">
+    JavaScript Dizeleri
+</h2>
+
+<h2 class="baslik2">
+    IP uzunluğu
+</h2>
+
+<h2 class="baslik3">
+    Kaçış Karakteri
+</h2>
+
+<h2 class="baslik4">
+    Uzun Kod Satırlarını Kırmak
+</h2>
+
+<h2 class="baslik5">
+    Dizeler Nesne Olabilir
+</h2>
+
+<h3 class="metin1">
+    JavaScript dizesi, tırnak içine yazılmış sıfır veya daha fazla karakterdir.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string'">Ornek icin TIKLA</button><br>
+    <br>Tek veya çift tırnak kullanabilirsiniz:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_quotes'">Ornek icin TIKLA</button><br><br>
+    **Dizeyi çevreleyen tırnak işaretleriyle eşleşmedikleri sürece, bir dizenin içindeki tırnak işaretlerini kullanabilirsiniz:<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_quotes_mixed'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin2">
+    Bir dizenin uzunluğunu bulmak için built-in lengthözelliğini kullanın:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_length'">Ornek icin TIKLA</button><br>
+
+
+</h3>
+
+<h3 class="metin3">
+    Dizeler tırnak içinde yazılması gerektiğinden, JavaScript bu dizeyi yanlış anlayacaktır:<br><br>
+
+    **var x = "We are the so-called "Vikings" from the north.";<br><br>
+    Dize "Biz sözde" olarak kesilecektir.<br>
+
+    Bu problemden kaçınmanın çözümü ters eğik çizgi kaçış karakterini kullanmaktır .<br>
+
+    Ters eğik çizgi ( \) çıkış karakteri özel karakterleri dize karakterlerine dönüştürür:<br>
+
+
+</h3>
+<h2>
+    <table class="table1">
+        <tr>
+            <th>Code</th>
+            <th>Result</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <th>\'</th>
+            <th>'</th>
+            <th>	Single quote</th>
+        </tr>
+
+        <tr>
+            <th>\"</th>
+            <th>	"</th>
+            <th>	Double quote</th>
+        </tr>
+
+        <tr>
+            <th>\\</th>
+            <th>\</th>
+            <th>	Backslash</th>
+        </tr>
+    </table>
+</h2>
+<h3 class="metin33">
+    **Dizi \"  , bir dizeye çift tırnak ekler:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_escape_quotes2'">Ornek icin TIKLA</button><br>
+    <br>**Dizi \'  , bir dizeye tek bir tırnak ekler:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_escape_quotes1'">Ornek icin TIKLA</button><br>
+    <br>**Dizi \\  bir dizeye ters eğik çizgi ekler:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_escape_backslash'">Ornek icin TIKLA</button><br>
+
+    <br>**JavaScript'te altı başka kaçış dizisi daha geçerlidir:<br>
+</h3>
+<h2>
+    <table class="table11">
+        <tr>
+            <th>Code</th>
+            <th>Result</th>
+        </tr>
+
+        <tr>
+            <th>\b</th>
+            <th>Backspace</th>
+        </tr>
+
+        <tr>
+            <th>\f</th>
+            <th>Form Feed</th>
+        </tr>
+
+        <tr>
+            <th>\n</th>
+            <th>New Line</th>
+        </tr>
+
+        <tr>
+            <th>\r</th>
+            <th>	Carriage Return</th>
+        </tr>
+
+        <tr>
+            <th>\t</th>
+            <th>	Horizontal Tabulator</th>
+        </tr>
+
+        <tr>
+            <th>\v</th>
+            <th>	Vertical Tabulator</th>
+        </tr>
+    </table>
+</h2>
+
+<h3 class="metin4">
+    En iyi okunabilirlik için, programcılar genellikle 80 karakterden uzun kod satırlarından kaçınmayı sever.<br>
+
+    Bir JavaScript ifadesi bir satıra sığmıyorsa, bunu kırmak için en iyi yer bir operatörden sonradır:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_statements_linebreak'">Ornek icin TIKLA</button><br>
+    <br>Ayrıca , metin dizesi içindeki bir kod satırını tek bir ters eğik çizgiyle ayırabilirsiniz :<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_break'">Ornek icin TIKLA</button><br>
+
+    <br>**\Yöntem tercih edilen bir yöntem değildir. Evrensel desteği olmayabilir.<br>
+    Bazı tarayıcılar \karakterin arkasındaki boşluklara izin vermez .<br><br>
+
+    Bir dizeyi ayırmanın daha güvenli bir yolu, dize eklemesini kullanmaktır:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_break_ok'">Ornek icin TIKLA</button><br>
+
+    <br>Bir kod satırını ters eğik çizgiyle ayıramazsınız:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_strings_codebreak'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin5">
+    Normalde, JavaScript dizeleri değişmez değerlerden oluşturulan ilkel değerlerdir:<br>
+
+    var firstName = "John";<br>
+
+    Ancak dizeler, anahtar kelimeye sahip nesneler olarak da tanımlanabilir new:<br>
+
+    var firstName = new String("John");<br>
+
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_object'">Ornek icin TIKLA</button><br>
+
+    **Nesne olarak dizeler oluşturmayın. Yürütme hızını yavaşlatır. Anahtar kelime kodu zorlaştırmaktadır.<br> Bu bazı beklenmedik sonuçlar doğurabilir:new
+
+    ==İşleci kullanırken eşit dizeler eşittir:<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_object1'">Ornek icin TIKLA</button><br><br>
+
+   ** ===İşleci kullanırken , eşit dizeler eşit değildir, çünkü ===işleç hem tür hem de değerde eşitlik bekler.<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_object2'">Ornek icin TIKLA</button><br><br>
+
+    **Veya daha da kötüsü. Nesneler karşılaştırılamaz:<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_object3'">Ornek icin TIKLA</button><br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_object4'">Ornek icin TIKLA</button><br><br>
+
+    <br>**Arasındaki farkı dikkat (x==y)ve (x===y).<br><br>
+    İki JavaScript nesnesinin karşılaştırılması her zaman geri döner false.<br>
+</h3>
+
+
+<h1 class="sbaslik">
+    JavaScript Numaraları
+</h1>
+<h3 class="smetin">
+    JavaScript'in yalnızca bir tür numarası vardır. Sayılar ondalıklı veya ondalıksız olarak yazılabilir.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers1'">Ornek icin TIKLA</button><br><br>
+    <br>Çok büyük veya çok küçük sayılar bilimsel (üslü) gösterimle yazılabilir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers2'">Ornek icin TIKLA</button><br><br>
+</h3>
+
+<h2 class="sbaslik1">
+    JavaScript Numaraları Her Zaman 64 bit Kayan Noktadır
+</h2>
+
+<h2 class="sbaslik2">
+    Hassas
+</h2>
+
+<h2 class="sbaslik3">
+    Sayı ve Dize Ekleme
+</h2>
+
+<h2 class="sbaslik4">
+    Sayısal Dizeler
+</h2>
+
+<h2 class="sbaslik5">
+    NaN - Sayı Değil
+</h2>
+
+<h2 class="sbaslik6">
+    Sonsuzluk
+</h2>
+
+<h2 class="sbaslik7">
+    onaltılık
+</h2>
+
+<h2 class="sbaslik8">
+    Sayılar Nesne Olabilir
+</h2>
+
+<h3 class="smetin1">
+    Diğer birçok programlama dilinin aksine, JavaScript tamsayılar, kısa, uzun, kayan nokta vb.Gibi farklı sayı türlerini tanımlamaz.<br>
+
+    JavaScript numaraları her zaman uluslararası IEEE 754 standardını izleyerek çift kesinlikli kayar nokta sayısı olarak saklanır.<br>
+
+    Bu biçim sayıları 64 bitte saklar; burada sayı (kesir) 0 ila 51 bitlerinde, üs 52 ila 62 bitlerinde ve oturum açma biti 63'te saklanır:<br>
+</h3>
+<h2>
+    <table class="table1">
+        <tr>
+            <th>Değer (Kesir / Mantissa olarak da bilinir)</th>
+            <th>	üs</th>
+            <th>İşaret</th>
+        </tr>
+
+        <tr>
+            <th>52 bit (0 - 51) </th>
+            <th>	11 bit (52-62)</th>
+            <th>	1 bit (63)</th>
+        </tr>
+    </table>
+</h2>
+
+
+<h3 class="smetin2">
+    Tamsayılar (nokta veya üs notasyonu olmayan sayılar) 15 basamağa kadar doğrudur.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_inaccurate1'">Ornek icin TIKLA</button><br><br>
+    <br>Maksimum ondalık sayı 17'dir, ancak kayan nokta aritmetiği her zaman% 100 doğru değildir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_inaccurate2'">Ornek icin TIKLA</button><br><br><br>
+    Yukarıdaki sorunu çözmek için çoğalmaya ve bölmeye yardımcı olur:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_inaccurate3'">Ornek icin TIKLA</button><br><br><br>
+
+
+</h3>
+
+<h3 class="smetin3">
+    UYARI !!<br><br>
+
+    JavaScript hem ekleme hem de birleştirme için + işlecini kullanır.<br>
+
+    Sayılar eklenir. Dizeler birleştirilir.<br><br>
+    İki sayı eklerseniz sonuç bir sayı olur:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_add'">Ornek icin TIKLA</button><br><br>
+    <br>İki dize eklerseniz, sonuç bir dize birleşimi olur:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_add_strings1'">Ornek icin TIKLA</button><br><br>
+    <br>Bir sayı ve dize eklerseniz, sonuç bir dize birleşimi olur:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_add_strings2'">Ornek icin TIKLA</button><br><br>
+    <br>Bir dize ve sayı eklerseniz, sonuç bir dize birleştirmesi olur:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_add_strings5'">Ornek icin TIKLA</button><br><br>
+
+    <br>Yaygın bir hata, bu sonucun 30 olmasını beklemektir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_add_strings3'">Ornek icin TIKLA</button><br><br>
+    <br>Yaygın bir hata, bu sonucun 102030 olmasını beklemektir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_add_strings4'">Ornek icin TIKLA</button><br><br>
+
+    <br>** JavaScript yorumlayıcısı soldan sağa doğru çalışır.<br>
+
+    ** İlk 10 + 20 eklenir, çünkü x ve y'nin her ikisi de sayıdır.<br>
+
+    ** Daha sonra z + bir dize olduğu için 30 + "30" birleştirilir.<br>
+</h3>
+
+<h3 class="smetin4">
+    JavaScript dizeleri sayısal içeriğe sahip olabilir:<br>
+    <br>** var x = 100;         // x is a number<br>
+
+    ** var y = "100";       // y is a string<br><br>
+    JavaScript dizeleri tüm sayısal işlemlerde sayılara dönüştürmeye çalışacaktır:<br>
+
+    Bu çalışacak:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_string1'">Ornek icin TIKLA</button><br><br>
+
+    Bu da işe yarayacaktır:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_string2'">Ornek icin TIKLA</button><br><br>
+    <br>Ve bu işe yarayacak:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_string3'">Ornek icin TIKLA</button><br><br>
+    <br>Ancak bu işe yaramaz:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_string4'">Ornek icin TIKLA</button><br><br>
+    <br>
+    Son örnekte JavaScript, dizeleri birleştirmek için + işlecini kullanır.<br>
+
+
+
+</h3>
+
+<h3 class="smetin5">
+    NaN bir sayının yasal bir sayı olmadığını belirten JavaScript'e ayrılmış bir kelimedir.<br>
+
+    Sayısal olmayan bir dize ile aritmetik yapmaya çalışmak NaN(Sayı Değil) ile sonuçlanır :<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_divide_string'">Ornek icin TIKLA</button><br><br>
+    Ancak, dize sayısal bir değer içeriyorsa sonuç bir sayı olur:<br><br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_divide_number'">Ornek icin TIKLA</button><br><br>
+    <br>isNaN()Bir değerin sayı olup olmadığını öğrenmek için genel JavaScript işlevini kullanabilirsiniz:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_isnan_true'">Ornek icin TIKLA</button><br><br>
+    <br>Dikkat et NaN. Eğer kullanırsanız NaNmatematiksel operasyonda, sonuç da olacaktır NaN:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_nan_math'">Ornek icin TIKLA</button><br><br>
+    <br>Veya sonuç bir birleştirme olabilir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_nan_concat'">Ornek icin TIKLA</button><br><br>
+    <br>NaNbir sayıdır: typeof NaNdöndürür number:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_nan_typeof'">Ornek icin TIKLA</button><br><br>
+
+
+</h3>
+
+<h3 class="smetin6">
+    Infinity(veya -Infinity) mümkün olan en büyük sayının dışında bir sayı hesaplarsanız JavaScript'in döndüreceği değerdir.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_infinity'">Ornek icin TIKLA</button><br><br>
+    <br>0'a (sıfır) bölme de üretir Infinity:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_infinity_zero'">Ornek icin TIKLA</button><br><br>
+    Infinitybir sayıdır: typeof Infinitydöner number.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_infinity_typeof'">Ornek icin TIKLA</button><br><br>
+
+</h3>
+
+<h3 class="smetin7">
+    JavaScript, önünde 0x varsa onaltılık sabitleri onaltılık olarak yorumlar.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_hex'">Ornek icin TIKLA</button><br><br>
+    Varsayılan olarak, JavaScript sayıları temel 10 ondalık sayı olarak görüntüler .<br>
+
+    Ama kullanabilirsiniz toString()çıktı numaralarına yöntemi tabanına 2 için tabanın 36 .<br>
+
+    Onaltılık temel 16'dır . Ondalık temel 10'dur . Sekizlik taban 8'dir . İkili taban 2'dir .<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_numbers_tostring'">Ornek icin TIKLA</button><br><br>
+
+</h3>
+
+<h3 class="smetin8">
+    Normalde JavaScript numaraları değişmez değerlerden oluşturulan ilkel değerlerdir:<br>
+
+    var x = 123;<br>
+
+    Ancak sayılar, anahtar kelimeye sahip nesneler olarak da tanımlanabilir new:<br>
+
+    var y = new Number(123);<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_object'">Ornek icin TIKLA</button><br><br>
+    <br>Sayı nesneleri oluşturmayın. Yürütme hızını yavaşlatır. Anahtar kelime kodu zorlaştırmaktadır. Bu bazı beklenmedik sonuçlar doğurabilir:<br>
+    <br>==İşleci kullanırken eşit sayılar eşittir:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_object1'">Ornek icin TIKLA</button><br><br>
+    <br>===İşleci kullanırken eşit sayılar eşit değildir, çünkü ===işleç hem tür hem de değerde eşitlik bekler.<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_object2'">Ornek icin TIKLA</button><br><br>
+    <br>Veya daha da kötüsü. Nesneler karşılaştırılamaz:<br>
+    <br>  <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_number_object3'">Ornek icin TIKLA</button><br><br>
+    <br><br>Arasındaki farkı dikkat (x==y)ve (x===y).<br>
+    İki JavaScript nesnesinin karşılaştırılması her zaman geri döner false.<br>
+</h3>
+
+
+</body>
+</html>
+

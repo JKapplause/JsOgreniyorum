@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .title {
+            position: center;
+            color: red;
+            font-family:"Comic Sans MS";
+        }
+
+
+
+
+        body {
+            background-color: #494f54;
+        }
+        .baslik {
+            font-family: "Comic Sans MS";
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            font-family: "Comic Sans MS";
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #494f54;}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown {
+            font-family: "Eras Bold ITC";
+        }
+
+
+        ul {
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 0;
+            padding: 0;
+            border-radius: 25px;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn1 {
+            display: inline-block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown1:hover .dropbtn1 {
+            background-color: red;
+        }
+
+        li.dropdown1 {
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content1 a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content1 a:hover {background-color: #494f54;}
+
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+        .baslik1 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 175px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin1 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 220px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik2 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 370px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .baslik3 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 370px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin2 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 410px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik3 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 560px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin3 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 600px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik4 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 750px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin4 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 790px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik5 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 940px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin5 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 990px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        table {
+            top: 1080px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+
+            border-radius: 25px;
+        }
+
+        .baslik6 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 1420px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin6 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1460px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .table2 {
+            top: 1700px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+
+            border-radius: 25px;
+        }
+        .baslik7 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 2000px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin7 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2040px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .baslik8 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 2400px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .metin8 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2440px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik9 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 2650px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .table3 {
+            top: 2700px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+
+            border-radius: 25px;
+        }
+
+        .baslik10 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 3070px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .table4 {
+            top: 3110px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+
+            border-radius: 25px;
+        }
+        .baslik11 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 3270px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .table5 {
+            top: 3310px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+
+            border-radius: 25px;
+        }
+
+        .baslik12 {
+            font-family: "Comic Sans MS";
+            color: #f8d7da;
+            position:absolute;
+            left: 100px;
+            top: 3440px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin11 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 3480px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .table6 {
+            top: 3600px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+
+            border-radius: 25px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<center>
+
+<h1 class="title">
+
+    <font color="red" size="8" > JavaScript</font>
+
+</h1>
+</center>
+<ul>
+    <li class="baslik"><a href="JavaScriptGiris.html">JavaScript Giris</a></li>
+    <li><a href="JavaScriptYazılımYapısı.html">JavaScript Yazılım Yapısı</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">JavaScript</a>
+        <div class="dropdown-content">
+            <a href="Degiskenler.html">Degiskenler</a>
+            <a href="Operatorler.html">Operatorler</a>
+            <a href="Aritmetik.html">Aritmetik</a>
+            <a href="VeriTipleri.html">Veri Tipleri</a>
+            <a href="FonksiyonYapisi.html">Fonksiyon Yapısı</a>
+        </div>
+    </li>
+    <li class="dropdown1">
+        <a href="javascript:void(0)" class="dropbtn1">JavaScript Tutorial</a>
+        <div class="dropdown-content1">
+            <a href="Olaylar.html">Olaylar</a>
+            <a href="Stringler,Sayilar.html">Stringler,Sayilar</a>
+            <a href="DizilerveDiziIslemleri.html">Diziler ve Dizi Islemleri</a>
+            <a href="İfKosulYapilari.html">If Kosul Yapıları</a>
+            <a href="TipDonusumleri.html">Tip Donusumleri</a>
+        </div>
+
+    <li><a href="CalismaYapisiveGenelMimarisi.html">Calısma Yapısı ve Genel Mimarisi</a></li>
+</ul>
+<h1 class="baslik1">
+    JavaScript Operatörleri
+</h1>
+<h2 class="baslik2">
+    Atama
+</h2>
+
+<h3 class="metin1">
+    Değişkenlere değerler atayın ve bunları birlikte ekleyin:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h2 class="baslik3">
+    Ekleme
+</h2>
+
+
+<h2 class="baslik4">
+    Carpma
+</h2>
+<h2 class="baslik5">
+    JavaScript Aritmetik İşleçleri
+</h2>
+
+<h2 class="baslik6">
+    JavaScript Atama İşleçleri
+</h2>
+
+<h2 class="baslik7">
+    Dize ve Sayı Ekleme JavaScript Dize İşleçleri
+</h2>
+
+<h2 class="baslik8">
+  Dize ve Sayı Ekleme
+
+</h2>
+<h2 class="baslik9">
+    JavaScript Karşılaştırma Operatörleri
+
+</h2>
+<h2 class="baslik10">
+     JavaScript Mantıksal İşleçleri
+
+</h2>
+
+<h2 class="baslik11">
+     JavaScript Türü Operatörleri
+
+</h2>
+<h2 class="baslik12" >
+    JavaScript Bitwise İşleçleri
+</h2>
+
+<h3 class="metin2">
+    Atama operatörü ( =) bir değişkenin bir değer atar.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_equal'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin3">
+    İlave operatörü ( +) numaralarını ekler:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_add'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin4">
+    Çarpma operatörü ( *) çarpar sayılar.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_mult'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin5">
+    Sayılarda aritmetik yapmak için aritmetik işleçler kullanılır:<br><br>
+
+</h3>
+<h2>
+<table>
+    <tr>
+        <th>Operator</th>
+        <th>Description</th>
+    </tr>
+
+    <tr>
+    <th>+</th>
+    <th>Addition</th>
+    </tr>
+
+    <tr>
+        <th>-</th>
+        <th>Subtraction</th>
+    </tr>
+
+    <tr>
+        <th>*</th>
+        <th>Multiplication</th>
+    </tr>
+
+    <tr>
+        <th>**</th>
+        <th>Exponentiation</th>
+    </tr>
+
+    <tr>
+        <th>/</th>
+        <th>Division</th>
+    </tr>
+
+    <tr>
+        <th>%</th>
+        <th>Modulus(Division Remainder) </th>
+    </tr>
+
+    <tr>
+        <th>++</th>
+        <th>Increment</th>
+    </tr>
+
+    <tr>
+        <th>--</th>
+        <th>Decrement</th>
+    </tr>
+
+
+</table>
+</h2>
+
+<h3 class="metin6">
+    Atama işleçleri, JavaScript değişkenlerine değerler atar.<br><br>
+    İlaveli atama operatörü ( +=) bir değişkenin bir değer katar.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_plusequal'">Ornek icin TIKLA</button><br>
+
+</h3>
+<h2>
+    <table class="table2">
+        <tr>
+            <th>
+                &emsp;  Operator &emsp;&emsp;
+            </th>
+            <th>
+                &emsp; Example &emsp;&emsp;
+            </th>
+            <th>
+                &emsp;  Same As &emsp;&emsp;
+            </th>
+        </tr>
+        <tr>
+            <th>
+                =
+            </th>
+            <th>
+                x = y
+            </th>
+            <th>
+                x = y
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                +=
+            </th>
+            <th>
+                x += y
+            </th>
+            <th>
+                x = x + y
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                -=
+            </th>
+            <th>
+                x -= y
+            </th>
+            <th>
+                x = x - y
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                *=
+            </th>
+            <th>
+                x *= y
+            </th>
+            <th>
+                x = x * y
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                /=
+            </th>
+            <th>
+                x /= y
+            </th>
+            <th>
+                x = x / y
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                %=
+            </th>
+            <th>
+                x %= y
+            </th>
+            <th>
+                x = x % y
+            </th>
+        </tr>
+
+        <tr>
+            <th>
+                **=
+            </th>
+            <th>
+                x **= y
+            </th>
+            <th>
+                x = x ** y
+            </th>
+        </tr>
+
+
+    </table>
+</h2>
+
+<h3 class="metin7">
+    +Operatör ayrıca (concatenate) dizeleri eklemek için kullanılabilir.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_concatenate'">Ornek icin TIKLA</button><br>
+
+    <br>+=Atama operatörü de (concatenate) dizeleri eklemek için kullanılabilir:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_concat4'">Ornek icin TIKLA</button><br>
+
+    <br>**Dizelerde kullanıldığında + işleci, birleştirme işleci olarak adlandırılır.<br>
+
+
+</h3>
+
+<h3 class="metin8">
+    İki sayı eklemek toplamı döndürür, ancak sayı ve dize eklemek bir dize döndürür:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_concat5'">Ornek icin TIKLA</button><br>
+    <br>**Bir sayı ve dize eklerseniz, sonuç bir dize olur!<br>
+
+</h3>
+
+
+<h2>
+    <table class="table3">
+        <tr>
+            <th>Operator&emsp;&emsp;</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <th>==</th>
+            <th>	equal to</th>
+        </tr>
+
+        <tr>
+            <th>===</th>
+            <th>equal value and equal type</th>
+        </tr>
+
+        <tr>
+            <th>!=</th>
+            <th>not equal</th>
+        </tr>
+
+        <tr>
+            <th>!==</th>
+            <th>not equal value or not equal type</th>
+        </tr>
+
+        <tr>
+            <th>></th>
+            <th>	greater than</th>
+        </tr>
+
+        <tr>
+            <th><</th>
+            <th>	less than</th>
+        </tr>
+
+        <tr>
+            <th>>=</th>
+            <th>	greater than or equal to</th>
+        </tr>
+
+        <tr>
+            <th><=</th>
+            <th>less than or equal to</th>
+        </tr>
+
+        <tr>
+            <th>?</th>
+            <th>	ternary operator</th>
+        </tr>
+
+
+    </table>
+</h2>
+
+<h2>
+    <table class="table4">
+        <tr>
+            <th>Operator&emsp;&emsp;</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <th>&&</th>
+            <th>	logical and</th>
+        </tr>
+
+        <tr>
+            <th>||</th>
+            <th>	logical or</th>
+        </tr>
+
+        <tr>
+            <th>!</th>
+            <th>	logical not</th>
+        </tr>
+    </table>
+</h2>
+
+<h2 >
+    <table class="table5">
+        <tr>
+            <th>Operator&emsp;&emsp;</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <th>typeof</th>
+            <th>Returns the type of a variable</th>
+        </tr>
+
+        <tr>
+            <th>instanceof</th>
+            <th>Returns true if an object is an instance of an object type</th>
+        </tr>
+
+
+    </table>
+</h2>
+
+<h2 class="metin11">
+    Bit operatörleri 32 bit sayıları üzerinde çalışır.<br>
+    İşlemdeki herhangi bir sayısal işlenen 32 bit sayıya dönüştürülür. Sonuç tekrar bir JavaScript numarasına dönüştürülür.<br><br>
+
+</h2>
+
+<h2>
+    <table class="table6">
+        <tr>
+            <th>Operator&emsp;&emsp;</th>
+            <th>Description&emsp;&emsp;</th>
+            <th>Example&emsp;&emsp;</th>
+            <th>Same as&emsp;&emsp;</th>
+            <th>Result&emsp;&emsp;</th>
+            <th>Decimal&emsp;&emsp;</th>
+        </tr>
+
+        <tr>
+            <th>&</th>
+            <th>AND</th>
+            <th>	5 & 1</th>
+            <th>	0101 & 0001</th>
+            <th>	0001</th>
+            <th>1</th>
+        </tr>
+
+        <tr>
+            <th>|</th>
+            <th>OR</th>
+            <th>5 | 1</th>
+            <th>	0101 | 0001</th>
+            <th>0101</th>
+            <th>5</th>
+        </tr>
+
+        <tr>
+            <th>~</th>
+            <th>NOT</th>
+            <th>	~ 5</th>
+            <th>	 ~0101	</th>
+            <th>	1010</th>
+            <th>	 10</th>
+        </tr>
+
+        <tr>
+            <th>^</th>
+            <th>XOR</th>
+            <th>	5 ^ 1</th>
+            <th>0101 ^ 0001</th>
+            <th>0100</th>
+            <th>4</th>
+        </tr>
+
+        <tr>
+            <th><<</th>
+            <th>Zero fill left shift</th>
+            <th>5 << 1</th>
+            <th>	0101 << 1</th>
+            <th>	1010</th>
+            <th>10</th>
+        </tr>
+
+        <tr>
+            <th>>></th>
+            <th>Signed right shift</th>
+            <th>5 >> 1</th>
+            <th>0101 >> 1</th>
+            <th>	0010</th>
+            <th> 2</th>
+        </tr>
+
+        <tr>
+            <th>>>></th>
+            <th>Zero fill right shift</th>
+            <th>	5 >>> 1</th>
+            <th>	0101 >>> 1</th>
+            <th>	0010</th>
+            <th>  2</th>
+        </tr>
+
+
+    </table>
+</h2>
+
+
+</body>
+</html>
+

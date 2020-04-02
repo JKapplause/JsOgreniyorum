@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .title {
+            position: center;
+            color: #6610f2;
+            font-family:"Comic Sans MS";
+        }
+
+
+
+
+        body {
+            background-color: #494f54;
+        }
+        .baslik {
+            font-family: "Comic Sans MS";
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            font-family: "Comic Sans MS";
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #494f54;}
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown {
+            font-family: "Eras Bold ITC";
+        }
+
+
+        ul {
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 0;
+            padding: 0;
+            border-radius: 25px;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn1 {
+            display: inline-block;
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown1:hover .dropbtn1 {
+            background-color: red;
+        }
+
+        li.dropdown1 {
+            display: inline-block;
+        }
+
+        .dropdown-content1 {
+            font-family: "Comic Sans MS";
+            display: none;
+            position: absolute;
+            background-color: #333333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content1 a {
+            color: #c9e2b3;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content1 a:hover {background-color: #494f54;}
+
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+
+        .baslik {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 175px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik1 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 230px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin1 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 270px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .table1 {
+            top: 340px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        .baslik2 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 670px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin2 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 710px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik3 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 1210px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .metin3 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1250px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .table2 {
+            top: 1330px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+
+        .baslik4 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 1420px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin4 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1460px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik5 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 1620px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin5 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1660px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .baslik6 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 1820px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .metin6 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 1860px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik7 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 2020px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin7 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2060px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+
+        .baslik8 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 2220px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin8 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2260px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik9 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 2420px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin9 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2460px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik10 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 2620px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin10 {
+            color: #f1b0b7;
+            position: absolute;
+            left: 100px;
+            top: 2660px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik11 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 2820px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin11 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 2860px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik12 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 3170px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .metin12 {
+            color: #f5f5f5;
+            position: absolute;
+            left: 100px;
+            top: 3210px;
+            list-style-type: none;
+            font-family: "Comic Sans MS";
+            margin: 10px;
+            padding: 5px;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .baslik13 {
+            font-family: "Comic Sans MS";
+            color: #357ebd;
+            position:absolute;
+            left: 100px;
+            top: 3820px;
+            list-style-type: none;
+            margin: 10px;
+            padding: 0;
+            border-radius: 20px;
+            overflow: auto;
+            background-color: #333333;
+        }
+        .table3 {
+            top: 3920px;
+            position: absolute;
+            list-style-type: none;
+            padding: 5px;
+            margin: 10px;
+            left: 100px;
+            overflow: auto;
+            background-color: #333333;
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+            border-radius: 25px;
+        }
+        .baslika {
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<center>
+
+<h1 class="title">
+
+    <font color="#ff1493" size="8" > JavaScript</font>
+
+</h1>
+</center>
+<ul>
+    <li class="baslika"><a href="JavaScriptGiris.html">JavaScript Giris</a></li>
+    <li><a href="JavaScriptYazılımYapısı.html">JavaScript Yazılım Yapısı</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">JavaScript</a>
+        <div class="dropdown-content">
+            <a href="Degiskenler.html">Degiskenler</a>
+            <a href="Operatorler.html">Operatorler</a>
+            <a href="Aritmetik.html">Aritmetik</a>
+            <a href="VeriTipleri.html">Veri Tipleri</a>
+            <a href="FonksiyonYapisi.html">Fonksiyon Yapısı</a>
+        </div>
+    </li>
+    <li class="dropdown1">
+        <a href="javascript:void(0)" class="dropbtn1">JavaScript Tutorial</a>
+        <div class="dropdown-content1">
+            <a href="Olaylar.html">Olaylar</a>
+            <a href="Stringler,Sayilar.html">Stringler,Sayilar</a>
+            <a href="DizilerveDiziIslemleri.html">Diziler ve Dizi Islemleri</a>
+            <a href="İfKosulYapilari.html">If Kosul Yapıları</a>
+            <a href="TipDonusumleri.html">Tip Donusumleri</a>
+        </div>
+
+    <li><a href="CalismaYapisiveGenelMimarisi.html">Calısma Yapısı ve Genel Mimarisi</a></li>
+</ul>
+
+<h1 class="baslik">
+    JavaScript Aritmetiği
+
+</h1>
+<h2 class="baslik1">
+    JavaScript Aritmetik İşleçleri
+</h2>
+
+<h2 class="baslik2">
+    Aritmetik işlemler
+</h2>
+
+<h2 class="baslik3">
+    Operatörler ve Operandlar
+</h2>
+
+<h2 class="baslik4">
+    Ekleme
+</h2>
+
+<h2 class="baslik5">
+    Çıkarma
+</h2>
+
+<h2 class="baslik6">
+    Çarpma
+</h2>
+
+<h2 class="baslik7">
+    Bölme
+</h2>
+
+<h2 class="baslik8">
+    kalan
+</h2>
+
+<h2 class="baslik9">
+    Arttırım
+</h2>
+
+<h2 class="baslik10">
+    eksiltim
+</h2>
+
+<h2 class="baslik11">
+    Üs
+</h2>
+
+<h2 class="baslik12">
+    Operatör Önceliği
+</h2>
+
+<h2 class="baslik13">
+    JavaScript Operatör Öncelik Değerleri
+</h2>
+
+
+
+<h3 class="metin1">
+    Aritmetik işleçler sayılar üzerinde (değişmez değerler veya değişkenler) aritmetik gerçekleştirir.<br><br>
+
+</h3>
+
+<h2>
+    <table class="table1">
+        <tr>
+            <th>Operator	&emsp;&emsp;</th>
+            <th>Description&emsp;&emsp;</th>
+        </tr>
+
+        <tr>
+            <th>+</th>
+            <th>Addition</th>
+        </tr>
+
+        <tr>
+            <th>-</th>
+            <th>Subtraction</th>
+        </tr>
+
+        <tr>
+            <th>*</th>
+            <th>Multiplication</th>
+        </tr>
+
+        <tr>
+            <th>**</th>
+            <th>Exponentiation</th>
+        </tr>
+
+        <tr>
+            <th>/</th>
+            <th>Division</th>
+        </tr>
+
+        <tr>
+            <th>%</th>
+            <th>Modulus </th>
+        </tr>
+
+        <tr>
+            <th>++	</th>
+            <th>Increment</th>
+        </tr>
+
+        <tr>
+            <th>--</th>
+            <th>Decrement</th>
+        </tr>
+
+
+    </table>
+</h2>
+
+<h3 class="metin2">
+    Tipik bir aritmetik işlem iki sayı üzerinde çalışır.<br>
+
+    İki sayı değişmez olabilir:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetic_operation'">Ornek icin TIKLA</button><br>
+
+    <br>veya değişkenler:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetic_variables'">Ornek icin TIKLA</button><br>
+
+    <br>veya ifadeler:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetic_expressions'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin3">
+    Sayılara (aritmetik işlemde) işlenen denir .<br>
+
+    İşlem (iki işlenen arasında yapılacak) bir operatör tarafından tanımlanır .<br>
+
+</h3>
+
+<h2>
+    <table class="table2">
+        <tr>
+            <th>İşlem Gören&emsp;&emsp;&emsp;&emsp;</th>
+            <th>	Şebeke&emsp;&emsp;&emsp;&emsp;</th>
+            <th>İşlem Gören&emsp;&emsp;&emsp;&emsp;</th>
+        </tr>
+
+        <tr>
+            <th>100</th>
+            <th>+</th>
+            <th>50</th>
+        </tr>
+    </table>
+</h2>
+
+<h3 class="metin4">
+    İlave operatörü ( +) numaralarını ekler:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_add'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin5">
+    Çıkarma operatörü ( -) sayıları çıkarır.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_sub'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin6">
+    Çarpma operatörü ( *) çarpar sayılar.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_mult'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin7">
+    Bölme operatörü ( /) numaraları böler.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_div'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin8">
+    Modülü operatörü ( %) bölmede kalan döndürür.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_mod'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin9">
+    Arttırma operatörü ( ++) numaraları artırır.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_increment'">Ornek icin TIKLA</button><br>
+
+</h3>
+
+<h3 class="metin10">
+    Eksiltme operatörü ( --) numaraları azaltır.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_decrement'">Ornek icin TIKLA</button><br>
+
+
+
+</h3>
+
+<h3 class="metin11">
+    Üs operatörü ( **) ikinci işlenen gücüne ilk işlenen yükseltir.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetric_exponent1'">Ornek icin TIKLA</button><br>
+    <br>x ** y ile aynı sonucu verir Math.pow(x,y):<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetric_exponent2'">Ornek icin TIKLA</button><br>
+</h3>
+
+<h3 class="metin12">
+    Operatör önceliği, işlemlerin aritmetik bir ifadede gerçekleştirilme sırasını tanımlar.<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetic_precedence1'">Ornek icin TIKLA</button><br>
+
+    <br>Yukarıdaki örnek 150 * 3 ile aynı mı, yoksa 100 + 150 ile aynı mı?<br>
+
+    Toplama veya çarpma işlemi önce mi yapılıyor?<br>
+
+    Geleneksel okul matematiğinde olduğu gibi, çarpma önce yapılır.<br>
+
+    Multiplication ( *) ve division ( /), toplama ( ) ve çıkarma ( ) ' dan daha yüksek önceliğe sahiptir .+-<br>
+
+    Ve (okul matematikinde olduğu gibi) öncelik, parantez kullanılarak değiştirilebilir:<br>
+
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetic_precedence2'">Ornek icin TIKLA</button><br>
+
+    <br>Parantez kullanılırken, önce parantez içindeki işlemler hesaplanır.<br>
+
+    Birçok işlem aynı önceliğe sahip olduğunda (toplama ve çıkarma gibi), soldan sağa hesaplanır:<br>
+    <br>Ornek Kod : Gormek icin Butona tıklayınız<br><br>
+    <button onclick="document.location = 'https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetic_precedence3'">Ornek icin TIKLA</button><br>
+</h3>
+
+<h2>
+    <table class="table3">
+        <tr>
+            <th>değer&emsp;</th>
+            <th>Şebeke&emsp;</th>
+            <th>Açıklama&emsp;</th>
+            <th>Misal&emsp;</th>
+
+        </tr>
+
+        <tr>
+            <th>20</th>
+            <th>()</th>
+            <th>İfade gruplaması</th>
+            <th>	(3 + 4)</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>19</th>
+            <th>.</th>
+            <th>	üye</th>
+            <th>	Kişi Adı</th>
+
+        </tr>
+
+        <tr>
+            <th>19</th>
+            <th>[]</th>
+            <th>üye</th>
+            <th>	Kişi Adı"]</th>
+
+        </tr>
+
+        <tr>
+            <th>19</th>
+            <th>()</th>
+            <th>	İşlev çağrısı</th>
+            <th>	myFunction ()</th>
+
+        </tr>
+
+        <tr>
+            <th>19</th>
+            <th>	yeni</th>
+            <th>	Oluşturmak</th>
+            <th>	yeni tarih()</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>17</th>
+            <th>	++</th>
+            <th>	Postfix Artışı</th>
+            <th>	i ++</th>
+
+        </tr>
+
+        <tr>
+            <th>17</th>
+            <th>-</th>
+            <th>Postfix Azaltma</th>
+            <th>	ben--</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>16</th>
+            <th>++</th>
+            <th>	Önek Artışı</th>
+            <th>	++ i</th>
+
+        </tr>
+
+        <tr>
+            <th>16	</th>
+            <th>-</th>
+            <th>	Önek Azaltma</th>
+            <th>	--ben</th>
+
+        </tr>
+
+        <tr>
+            <th>16</th>
+            <th>!</th>
+            <th>	Mantıksal değil</th>
+            <th>! (X == y)</th>
+
+        </tr>
+
+        <tr>
+            <th>16</th>
+            <th>	bir çeşit</th>
+            <th>	tip</th>
+            <th>	x türü</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>15</th>
+            <th>	**</th>
+            <th>Üstelleştirme </th>
+            <th>10 ** 2</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>14</th>
+            <th>*</th>
+            <th>	Çarpma işlemi</th>
+            <th>	10 * 5</th>
+
+        </tr>
+
+        <tr>
+            <th>14</th>
+            <th>	/</th>
+            <th>Bölünme</th>
+            <th>	10/5</th>
+
+        </tr>
+
+        <tr>
+            <th>14	</th>
+            <th>%</th>
+            <th>Bölüm Kalanı</th>
+            <th>% 10</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>13</th>
+            <th>	+</th>
+            <th>İlave</th>
+            <th>10 + 5</th>
+
+        </tr>
+
+        <tr>
+            <th>13</th>
+            <th>-</th>
+            <th>Çıkarma</th>
+            <th>10 - 5</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>12</th>
+            <th><<</th>
+            <th>	Sola kay</th>
+            <th>x << 2</th>
+
+        </tr>
+
+        <tr>
+            <th>12</th>
+            <th>	>></th>
+            <th>Sağa kaydır</th>
+            <th>x >> 2</th>
+
+        </tr>
+
+        <tr>
+            <th>12</th>
+            <th>	>>></th>
+            <th>Sağa kaydırma (imzasız)</th>
+            <th>	x >>> 2</th>
+
+        </tr>
+
+        <tr>
+            <th>11</th>
+            <th><</th>
+            <th>	Daha az</th>
+            <th>	x <y </th>
+
+        </tr>
+
+        <tr>
+            <th>11</th>
+            <th>	<=</th>
+            <th>	Az veya eşit</th>
+            <th>	x <= y</th>
+
+        </tr>
+
+        <tr>
+            <th>11</th>
+            <th>></th>
+            <th>	Daha büyük</th>
+            <th>	x> y</th>
+
+        </tr>
+
+        <tr>
+            <th>11</th>
+            <th>> =</th>
+            <th>Daha büyük veya eşit</th>
+            <th>x> = y</th>
+
+        </tr>
+
+        <tr>
+            <th>11</th>
+            <th>içinde</th>
+            <th>Nesnedeki Özellik</th>
+            <th>Matematikte "PI"</th>
+
+        </tr>
+
+        <tr>
+            <th>11</th>
+            <th>örneği</th>
+            <th>Nesne Örneği</th>
+            <th>Dizi örneği</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>10</th>
+            <th>==</th>
+            <th>Eşit</th>
+            <th>x == y</th>
+
+        </tr>
+
+        <tr>
+            <th>10</th>
+            <th>	===</th>
+            <th>Katı eşit</th>
+            <th>x === y</th>
+
+        </tr>
+
+        <tr>
+            <th>10</th>
+            <th>! =</th>
+            <th>eşitsiz</th>
+            <th>x! = y</th>
+
+        </tr>
+
+        <tr>
+            <th>10</th>
+            <th>	! ==</th>
+            <th>Sıkı eşitsiz</th>
+            <th>x! == y</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>9</th>
+            <th>&</th>
+            <th>Bitsel VE</th>
+            <th>	x & y</th>
+
+        </tr>
+
+        <tr>
+            <th>8</th>
+            <th>	^</th>
+            <th>	Bitsel XOR</th>
+            <th>	x ^ y</th>
+
+        </tr>
+
+        <tr>
+            <th>7</th>
+            <th>	|</th>
+            <th>	Bitsel VEYA</th>
+            <th>	x | y</th>
+
+        </tr>
+
+        <tr>
+            <th>6</th>
+            <th>	&&</th>
+            <th>	Mantıksal VE</th>
+            <th>	x && y</th>
+
+        </tr>
+
+        <tr>
+            <th>5</th>
+            <th>||	</th>
+            <th>Mantıksal VEYA</th>
+            <th>	x || y</th>
+
+        </tr>
+
+        <tr>
+            <th>4</th>
+            <th>? :</th>
+            <th>	Şart</th>
+            <th>	? "Evet Hayır"</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>/ =</th>
+            <th>Görev</th>
+            <th>x / = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>- =</th>
+            <th>Görev</th>
+            <th>	x - = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>* =</th>
+            <th>Görev</th>
+            <th>	x * = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>% =</th>
+            <th>Görev</th>
+            <th>	x% = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>	<< =</th>
+            <th>Görev</th>
+            <th>	x << = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>	>> =</th>
+            <th>Görev</th>
+            <th>	x >> = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>	>>> =</th>
+            <th>Görev</th>
+            <th>	x >>> = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>	& =</th>
+            <th>Görev</th>
+            <th>	x & = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>	^ =</th>
+            <th>Görev</th>
+            <th>	x ^ = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>	| =</th>
+            <th>Görev</th>
+            <th>	x | = y</th>
+
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <th>+ =</th>
+            <th>Görev</th>
+            <th>x + = y</th>
+
+        </tr>
+
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+
+        <tr>
+            <th>2</th>
+            <th>Yol ver</th>
+            <th>Duraklatma İşlevi</th>
+            <th>verim x</th>
+
+        </tr>
+
+        <tr>
+            <th>1</th>
+            <th>,</th>
+            <th>	Virgül</th>
+            <th>	5, 6</th>
+
+        </tr>
+
+
+    </table>
+</h2>
+
+
+</body>
+</html>
+
