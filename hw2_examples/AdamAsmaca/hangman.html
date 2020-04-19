@@ -1,0 +1,491 @@
+<script>
+    window.onload = function() {
+        let kelimeDizisi = [
+            ["K", "E", "D", "I"],
+            ["M", "O", "U", "S", "E"],
+            ["J", "A", "V", "A", "S", "C", "R", "I", "P", "T"],
+            ["P", "A", "T", "A", "T", "E", "S"],
+            ["K", "E", "B", "A", "P"],
+            ["C", "O", "R", "O", "N", "A"],
+            ["K", "O", "A", "L", "A"]
+        ];
+        let kategoriDizisi = [
+            ["Bir nevi uzaylı"],
+            ["Halk dilinde fare"],
+            ["Bize verilen ödev"],
+            ["Haslaması,kızartması,püresi yapılabilen bir sebze"],
+            ["Türkiyenin en ünlü fastfood yemeği"],
+            ["Ocak 2020'den beri dünyayı saran virüs"],
+            ["Avustralyada nesli tükenme noktasına gelen hayvan"]
+        ];
+
+        let newGame = document.getElementById("newGame");
+        newGame.onclick = startNewGame;
+
+        class AdamAsmaca {
+            constructor() {
+
+                this.random = Math.floor(Math.random() * kelimeDizisi.length);
+                this.wordToGuess = kelimeDizisi[this.random];
+                this.kategori = kategoriDizisi[this.random];
+                this.placeholderArray = Array(this.wordToGuess.length).fill("_");
+                this.guessed = [];
+                this.lives = 6;
+            }
+            setupNewWord() {
+
+                let guessWrapper = document.getElementById("guessWrapper");
+                let placeholderP = document.createElement("p");
+                let kategori = document.getElementById("kategoriAdı");
+                kategori.innerHTML = this.kategori;
+
+                placeholderP.setAttribute("id", "placeholderP");
+                placeholderP.innerHTML = this.placeholderArray.join("");
+                guessWrapper.appendChild(placeholderP);
+
+                let userLetter = document.getElementById("userLetter");
+                userLetter.onkeypress = this.handleKeyPress.bind(this);
+
+                let tahminButton = document.getElementById("tahminButton");
+                tahminButton.onclick = this.handleClick.bind(this);
+            }
+            handleClick() {
+
+                let userLetterInput = document.getElementById("userLetter");
+                let userLetter = userLetterInput.value.toUpperCase();
+                let placeholderP = document.getElementById("placeholderP");
+                let warningText = document.getElementById("warningText");
+                let alreadyGuessed = document.querySelector("#alreadyGuessed span");
+                let yanlisHarf = document.querySelector("#yanlisHarf span");
+                let leftLives = document.querySelector("#leftLives span");
+
+                if (!/[a-zA-Z]/.test(userLetter)) {
+
+                    unhideElements("hidden", warningText);
+                    warningText.innerHTML = "Lutfen A-Z arasında bir harf giriniz...";
+                } else {
+                    hideElements("hidden", warningText);
+
+                    if (
+                        this.wordToGuess.indexOf(userLetter) > -1 &&
+                        this.guessed.indexOf(userLetter) == -1
+                    ) {
+                        //check if letter is a match, and first guess
+                        checkGuess(this.wordToGuess, userLetter);
+                        hideElements("hidden", warningText);
+                    } else if (
+                        this.wordToGuess.indexOf(userLetter) == -1 &&
+                        this.guessed.indexOf(userLetter) == -1
+                    ) {
+
+                        hideElements("hidden", warningText);
+                        unhideElements("hidden", yanlisHarf.parentNode);
+                        yanlisHarf.innerHTML += userLetter;
+                        this.lives--;
+                        hangerDraw(this.lives);
+                        hideLives(this.lives);
+                    } else {
+                        //if not first use of this letter
+                        unhideElements("hidden", warningText);
+                        warningText.innerHTML = "";
+                        warningText.innerHTML += "Zaten Tahmin Edildi : " + userLetter;
+                    }
+                    this.guessed.indexOf(userLetter) == -1
+                        ? this.guessed.push(userLetter)
+                        : null;
+
+                    if (Array.from(placeholderP.innerHTML).indexOf("_") == -1) {
+
+                        gameOver(true);
+                    } else if (this.lives == 0) {
+
+                        gameOver();
+                    }
+                }
+                userLetterInput.value = "";
+            }
+            handleKeyPress(e) {
+
+                var tahminButton = document.getElementById("tahminButton");
+                if (e.keyCode === 13) {
+                    tahminButton.click();
+                }
+            }
+        }
+
+        function checkGuess(wordToGuess, userLetter) {
+
+            let placeholderP = document.getElementById("placeholderP");
+            let placeholderArray = Array.from(placeholderP.innerHTML);
+            placeholderArray = placeholderArray.map((el, i) => {
+
+                if (wordToGuess[i] == userLetter) {
+                    return (el = userLetter);
+                } else {
+                    return el;
+                }
+            });
+
+            placeholderP.innerHTML = placeholderArray.join("");
+        }
+
+        function gameOver(win) {
+
+            let winMessage = document.getElementById("statusMessage");
+            let btnWrapper = document.querySelector(".button-wrapper");
+            hideElements("hidden", btnWrapper);
+            if (win) {
+                winMessage.innerHTML = "Kazandınız !!";
+                winMessage.style.color = "red";
+            } else {
+                winMessage.innerHTML = "Kaybettiniz !!";
+                winMessage.style.color = "rgb(239, 83, 80)";
+            }
+        }
+
+        function hangerDraw(num) {
+
+            let show = document.getElementById(`show${num}`);
+            unhideElements("hidden", show);
+        }
+
+        function hideLives(num) {
+
+            let life = document.getElementById(`life${num}`);
+            hideElements("hiddenLife", life);
+        }
+
+        function hideElements(myclass, ...els) {
+
+            for (let el of els) {
+                el.classList.add(myclass);
+            }
+        }
+
+        function unhideElements(myclass, ...els) {
+
+            for (let el of els) {
+                el.classList.remove(myclass);
+            }
+        }
+
+        function startNewGame() {
+            let btnWrapper = document.querySelector(".button-wrapper");
+            let winMessage = document.getElementById("statusMessage");
+            let yanlisHarf = document.querySelector("#yanlisHarf span");
+            let warningText = document.querySelector("#warningText");
+            let hiddenHangman = Array.from(document.querySelectorAll("svg .bodyPart"));
+            let hiddenLives = Array.from(document.querySelectorAll(".lives"));
+
+            for (let bodyPart of hiddenHangman) {
+                hideElements("hidden", bodyPart);
+            }
+
+            for (let life of hiddenLives) {
+                unhideElements("hiddenLife", life);
+            }
+
+            yanlisHarf.innerHTML = "";
+            unhideElements("hidden", btnWrapper);
+            hideElements("hidden", yanlisHarf.parentNode, warningText);
+            winMessage.innerHTML = "AdamAsmaca";
+            winMessage.style.color = "black";
+            let oldP = document.getElementById("placeholderP");
+            if (oldP.parentNode) {
+                oldP.parentNode.removeChild(oldP);
+            }
+
+            let startGame = new Hangman();
+            startGame.setupNewWord();
+        }
+
+        let startGame = new AdamAsmaca();
+        startGame.setupNewWord();
+    };
+
+</script>
+<style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: white;
+        background-size: contain;
+        background-repeat: repeat;
+        font-family: "Permanent Marker", cursive;
+        position: relative;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper,
+    .button-wrapper {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .outside-wrapper {
+        margin-bottom: 20px;
+        text-align:center;
+    }
+
+    .outside-wrapper:nth-child(2) {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        max-height: 300px;
+    }
+
+    .outside-wrapper:nth-child(3) {
+        margin-bottom: auto;
+        height: 178px;
+        width: 100%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #statusMessage {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        height: 94px;
+    }
+
+    svg {
+        transform: rotate(-1deg);
+    }
+
+    .lives {
+        width: 40px;
+        height: auto;
+    }
+
+    .hiddenLife {
+        display: inline-block;
+        animation: lifeAway 0.6s forwards;
+    }
+
+    @keyframes lifeAway {
+        0% {
+            opacity: 1;
+        }
+
+        10% {
+            transform: scale(1.5) rotate(0deg);
+        }
+
+        50% {
+            transform: scale(0.5) rotate(720deg);
+        }
+
+        100% {
+            transform: scale(0) rotate(720deg);
+            opacity: 0;
+            display: none;
+        }
+    }
+
+    #kategoriAdı {
+        font-size: 20px;
+        margin: 0 5px 5px 5px;
+    }
+
+    #warningText {
+        color: rgb(239, 83, 80);
+    }
+
+    .warning {
+        height: 20px;
+    }
+
+    #guessWrapper p {
+        font-size: 40px;
+        display: inline-block;
+        letter-spacing: 15px;
+        margin-bottom: 20px;
+        margin-top: 0;
+        color: red;
+    }
+
+    .inside-wrapper {
+        text-align: center;
+    }
+
+    .inside-wrapper:first-child {
+        width: 250px;
+    }
+
+    .inside-wrapper:last-child {
+        width: 400px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inside-wrapper div:last-child {
+        margin-top: auto;
+    }
+
+    #yanlisHarf {
+        text-align: right;
+    }
+
+    #yanlisHarf span {
+        text-align: right;
+        color: rgb(239, 83, 80);
+        letter-spacing: 5px;
+    }
+
+    @media (max-width: 470px) {
+        #kategoriAdı {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .lives {
+            width: 25px;
+            height: auto;
+        }
+
+        #guessWrapper p {
+            font-size: 20px;
+        }
+    }
+
+    input {
+        border-radius: 7px;
+        border-style: none;
+        border: 1px solid gray;
+        text-align: center;
+        transition: 0.2s linear;
+    }
+
+    input:focus {
+        outline: none;
+        border: 1px solid red;
+    }
+
+    button {
+        transition: 0.2s linear;
+        outline: none;
+        border-style: none;
+        background-color: darkgray;
+        color: black;
+        border-radius: 7px;
+    }
+
+    button:hover,
+    button:focus {
+        background-color: red;
+        outline: none;
+        color: white;
+    }
+
+    input,
+    button {
+        padding: 5px 10px;
+        box-sizing: border-box;
+        letter-spacing: 3px;
+    }
+
+</style>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>AdamAsmaca</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+<main>
+    <div class="outside-wrapper">
+        <h1 id="statusMessage">Adam Asmaca </h1>
+
+    </div>
+
+    <div class="outside-wrapper">
+
+        <div class="inside-wrapper">
+
+
+            <svg version="1.1" id="hangknuckles" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 169.28 205" enable-background="new 0 0 169.28 205" xml:space="preserve">
+                    <g id="hanger">
+                        <line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="170.259" y1="203.446" x2="0.781" y2="203.001" />
+                        <line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="38.779" y1="2" x2="39.279" y2="202" />
+                        <line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="139.78" y1="4" x2="34.78" y2="2" />
+                        <line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="138.78" y1="4" x2="135.78" y2="49" />
+                        <line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="77.323" y1="2.51" x2="39.791" y2="28.042" />
+                    </g>
+                <line id="show0" class="bodyPart hidden" fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="136.78" y1="119" x2="148.78" y2="152" />
+                <line id="show1" class="bodyPart hidden" fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="137.78" y1="119" x2="114.78" y2="157" />
+                <line id="show2" class="bodyPart hidden" fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="136.78" y1="108" x2="99.28" y2="100.5" />
+                <line id="show3" class="bodyPart hidden" fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="136.78" y1="107" x2="166.28" y2="94.5" />
+                <line id="show4" class="bodyPart hidden" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="137.78" y1="82" x2="136.78" y2="120.5" />
+                <image overflow="visible" id="show5" class="bodyPart hidden" width="96" height="96" xlink:href="https://previews.123rf.com/images/miceking/miceking1506/miceking150600257/40801185-angry-bull-head.jpg" transform="matrix(0.5426 0 0 0.516 110.2271 42.9535)">
+                    </image>
+
+                </svg>
+
+        </div>
+        <div class="inside-wrapper">
+            <div>
+                <img id="life5" class="lives" src="https://previews.123rf.com/images/miceking/miceking1506/miceking150600257/40801185-angry-bull-head.jpg" alt="">
+                <img id="life4" class="lives" src="https://previews.123rf.com/images/miceking/miceking1506/miceking150600257/40801185-angry-bull-head.jpg" alt="">
+                <img id="life3" class="lives" src="https://previews.123rf.com/images/miceking/miceking1506/miceking150600257/40801185-angry-bull-head.jpg" alt="">
+                <img id="life2" class="lives" src="https://previews.123rf.com/images/miceking/miceking1506/miceking150600257/40801185-angry-bull-head.jpg" alt="">
+                <img id="life1" class="lives" src="https://previews.123rf.com/images/miceking/miceking1506/miceking150600257/40801185-angry-bull-head.jpg" alt="">
+                <img id="life0" class="lives" src="https://previews.123rf.com/images/miceking/miceking1506/miceking150600257/40801185-angry-bull-head.jpg" alt="">
+            </div>
+            <div>
+                <p id="yanlisHarf" class="hidden">Yanlis Harf:<br> <span></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="outside-wrapper">
+
+        <div class="wrapper">
+            <p id="kategoriAdı">Kategori:smtg</p>
+            <div id="guessWrapper">
+            </div>
+        </div>
+
+        <div class="button-wrapper">
+            <input type="text" id="userLetter" maxlength="1" size="4" autocomplete="off">
+            <button type="button" id="tahminButton">Tahmin</button>
+        </div>
+
+        <div class="wrapper warning">
+            <span id="warningText" class="hidden"> </span>
+        </div>
+
+    </div>
+
+    <div class="outside-wrapper">
+        <button type="button" id="newGame">Yeni Oyun</button>
+    </div>
+</main>
+
+</body>
+
+</html>

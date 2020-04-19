@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type=button] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: left;
+            border: 2px solid red;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+            border: 2px solid red;
+        }
+
+        .container {
+            border-radius: 25px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            font-family: "Comic Sans MS";
+
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+            font-family: "Comic Sans MS";
+
+
+        }
+
+        .col-75 {
+            float: left;
+            width: 30%;
+            margin-top: 6px;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .col-25, .col-75, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+        .baslik {
+            font-family: "Comic Sans MS";
+            background-image: linear-gradient(to left, violet, red, indigo,purple,blue,yellow,orange,pink);
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .date {
+            font-family: "Comic Sans MS";
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+            position: absolute;
+            left: 465px;
+
+
+        }
+
+    </style>
+
+
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+        function formkontrol() {
+            fname = document.getElementById('fname').value;
+            lname = document.getElementById('lname').value;
+            kadi = document.getElementById('kadi').value;
+            sifre = document.getElementById('sifre').value;
+            tsifre = document.getElementById('tsifre').value;
+            email = document.getElementById('email').value;
+            tcno = document.getElementById('tcno').value;
+            cinsiyet = document.getElementById('cinsiyet').value;
+            subject = document.getElementById('subject').value;
+
+            var hata = new Array();
+            var sembol = '*|,:<>[]{}`;()@&$#%!+-"/';
+
+            var sembolvar = false;
+            for (var i = 0; i < sifre.length; i++) {
+                if (sembol.indexOf(sifre.charAt(i)) != -1) {
+                    sembolvar = true;
+                }
+            }
+
+
+            if (fname == "")
+                hata.push('lutfen adi bos gecmeyiniz...');
+            else if (fname.length < 3)
+                hata.push('Uc Karakterden az ad olamaz lutfen uygun bir ad giriniz...');
+
+
+            if (lname == '')
+                hata.push('lutfen soyadi  bos gecmeyin');
+
+
+            if (kadi == ' ')
+                hata.push('Kullaniciadini bos bırakmayınız');
+
+            if (sifre == '')
+                hata.push('Lutfen Şifre alanını bos bırakmayınız');
+            if (tsifre == '')
+                hata.push('Lutfen Tekrar Şifre alanını bos bırakmayınız');
+            else {
+                if (sifre != tsifre)
+                    hata.push('Şifreler aynı olmalıdır.');
+
+                else if (sifre.length < 6)
+                    hata.push('Şifre 6 karekter veya daha büyük karakterden olusmalıdır.');
+            }
+
+            if (email == '')
+                hata.push('email alanını bos bırakmayınız...');
+            try {
+                if (tcno == '')
+                    hata.push('tcno alanını bos bırakmayınız...');
+                else if (tcno.length < 11)
+                    hata.push('tcno 11 karakter kısa olamaz');
+                else if (tcno.length > 11)
+                    hata.push('tcno 11 karakterden uzun olamaz');
+                else (isNaN(tcno.value))
+                hata.push('Hatalı karakter girdiniz...');
+            }
+            catch (e) {
+                uyarı.textContent=e;
+                tcno.focus();
+            }
+
+            if (subject=='')
+                hata.push('lutfen calisma alanlarini bos bırakmayınız size daha iyi hizmet sunabilmemiz icin bize calisma alanlarinizi belirtin...');
+
+
+            if (hata.length > 0) {
+                alert(hata.join("\n"));
+                return false;
+            } else alert('Kayıt işleminiz tamamlandı...');
+        }
+    </script>
+</head>
+<body>
+
+<center>
+
+
+<h1 class="baslik">Kullanici Formu</h1>
+</center>
+<div class="container">
+    <form>
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">Ad</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Adiniz...">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Soyad</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Soyadiniz...">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Kullanici Adi</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="kadi" name="kullaniciAdi" placeholder="">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Sifre</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="sifre" name="sifre" placeholder="***********">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Sifre(Tekrar)</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="tsifre" name="tsifre" placeholder="***********">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Email</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="Email">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">TC Kimlik No</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="tcno" name="tcno" placeholder="TC No...">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="cinsiyet">Cinsiyet</label>
+            </div>
+            <div class="col-75">
+                <select id="cinsiyet" name="cinsiyet">
+                    <option value="seciniz">Seciniz...</option>
+                    <option value="erkek">Erkek</option>
+                    <option value="kadin">Kadin</option>
+                    <option value="belirtmekistemiyorum">Belirtmek Istemiyorum</option>
+                    <option value="diger">Diger</option>
+                </select>
+            </div>
+        </div>
+<div class="row">
+<div class="col-25">
+    <div class="col-75">
+        <label for="start">Dogum Tarihi:</label>
+
+        <input class="date" id="start" name="trip-start"
+               value="2018-07-22"
+               min="2018-01-01" max="2018-12-31">
+    </div>
+</div>
+</div>
+
+
+
+        <div class="row">
+            <div class="col-25">
+                <label for="subject">Calisma Alanları</label>
+            </div>
+            <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Buraya Yazın..." style="height:200px"></textarea>
+            </div>
+        </div>
+
+<div class="row">
+    <tr>
+        <td colspan="300">
+            <input type="button"  onclick="formkontrol();" value="Kaydet">
+        </td>
+
+    </tr>
+</div>
+    </form>
+
+</div>
+
+
+</body>
+</html>

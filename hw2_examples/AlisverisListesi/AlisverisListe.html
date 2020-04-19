@@ -1,0 +1,108 @@
+
+<style>
+    body {
+        background: grey;
+        font-family: Raleway;
+    }
+
+    header {
+        font-family: Pacifico;
+        margin-top: 1.5em;
+        text-align: center;
+        color: #5bc0de;
+        
+    }
+
+    #forms {
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    #toadd {
+        float: right;
+        padding-right: 15px;
+    }
+
+    #clear {
+        float: right;
+    }
+
+    #item {
+        width: 300px;
+        height: 25px;
+    }
+
+    input:focus {
+        outline: none;
+        border: solid lightgray .2em;
+        background-image: none;
+        text-indent: 0em;
+        font-family: "Comic Sans MS";
+        border-radius: 25px;
+    }
+
+    input[placeholder] {
+       font-family: "Comic Sans MS";
+        font-size: 18px;
+        border-radius: 20px;
+    }
+
+    #list {
+        max-width: 450px;
+        height: 700px;
+        margin-top: 1.5em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .shopping {
+        list-style: none;
+    }
+
+    li {
+        font-size: 20px;
+        margin-top: .3em;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        font-family: "Comic Sans MS";
+    }
+
+    .ui-button.ui-widget{
+        height: 21px;
+        width: 25px;
+        outline: none;
+        margin-right: 10px;
+    }
+
+</style>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>alisveris!</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico|Raleway:400,600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js"></script>
+</head>
+<body>
+<header>
+    <img src="shopping-bag-black-silhouette.png" width="75" height="75">
+    <img src="sandwich_icon_126985.png" width="75" height="75">
+    <img src="shopping-cart-of-checkered-design.png" width="75" height="75">
+    <h1>Alısveris Listesi</h1>
+</header>
+<div id="forms">
+    <input id="item" type="text" placeholder="Urunleri yazınız...">
+    <input id="clear" type="image" src="iconfinder-brush-clean-service-labor-4622510_122413.png" width="35" height="35">
+    <input id="toadd" type="image" src="shopping-cart-add-button_icon-icons.com_56132.png" width="35" height="35">
+</div>
+<div id="list">
+    <ul class="shopping"></ul>
+</div>
+</body>
+</html>
